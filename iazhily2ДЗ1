@@ -1,0 +1,170 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Здравствуй, дивный новый мир!\n"
+     ]
+    }
+   ],
+   "source": [
+    "print 'Здравствуй, дивный новый мир!'"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Язык *Python* мне нужен для\n",
+    "====\n",
+    "- автоматизации обычных офисных задач,\n",
+    "- парсинга сайтов,\n",
+    "- обработки больших массивов различных данных,\n",
+    "- создания своего приложения,\n",
+    "- возможно, создания своего сайта."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "97969.14166032098"
+      ]
+     },
+     "execution_count": 46,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "200000*(1+8./100/12)**(5*12)-200000"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "93865.61536000011"
+      ]
+     },
+     "execution_count": 49,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# процентная ставка\n",
+    "p=8.0\n",
+    "# сколько раз в год происходит капитализация\n",
+    "f=1\n",
+    "# сумма вклада\n",
+    "S=200000.0\n",
+    "# количество лет\n",
+    "L=5\n",
+    "\n",
+    "(S*(1+p/100/f)**(f*L)-S)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "---далее пробы пера---"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "97969.14166032098"
+      ]
+     },
+     "execution_count": 47,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "p=np.float32(8)\n",
+    "f=np.float32(12)\n",
+    "S=np.float32(200000)\n",
+    "L=np.float32(5)\n",
+    "S*(1+p/100/f)**(f*L)-S"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[93865.61536000011, 97969.14166032098]"
+      ]
+     },
+     "execution_count": 60,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "p=8.\n",
+    "S=200000.\n",
+    "L=5\n",
+    "ans=[(S*(1+p/100/f)**(f*L)-S) for f in [1,12]]\n",
+    "ans"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 2",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
